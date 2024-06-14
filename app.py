@@ -22,7 +22,7 @@ st.write("")
 
 
 def get_poster_path(movie_id):
-    response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=d71db26bc6202075b61932637f591216")
+    response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}")
     poster_path = response.json()['poster_path']
     return "https://image.tmdb.org/t/p/w500/" + poster_path
 
